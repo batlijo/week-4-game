@@ -39,28 +39,28 @@
 
   	$(".ranNumBox").html(randNum);
   	$(".scoreDisplayChild").html(finalScore);
+
+
   }
+  $(".crystal-image").on("click", function() {
+  	var crystalValue = ($(this).attr("data-crystalvalue"));
+    crystalValue = parseInt(crystalValue);
+    counter += crystalValue;
+    alert("New score: " + counter);
+    if (counter === targetNumber) {
+      alert("You win!");
+    }
+    else if (counter >= targetNumber) {
+      alert("You lose!!");
+    }
+
+  });
+
+ reset: function () {
+
+ }
 
 
- reset: function() 
- {
-
-// to end the game
-	if (finalScore === randNum)
-	{
-		win ++;
-		$(".win").html(win);
-		$(".scoreDisplayChild").html(0);
-		reset();
-	}
-	else if (finalScore > randNum)
-	{
-		loss ++;
-		$(".loss").html(loss);
-		$(".scoreDisplayChild").html(0);
-		reset();
-	}
-	
 
 
 

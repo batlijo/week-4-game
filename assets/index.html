@@ -2,13 +2,16 @@
 <html>
 <head>
 	<title>Crystal Collectors</title>
+	<link rel="stylesheet" type = "text/css" href=" style.css" />
+	<link rel="stylesheet" type = "text/css" href="reset.css" />
+	<script src= "game.js"></script>
 </head>
 <body>
 	<div>
 		<h1 class="game name">CrystalsCollector!</h1>
 	</div>
 
-	<div class="game instructions">
+	<div id="instructionBox">
 		<p>You will be given a random number at the start of the game. 
 		<br> There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score. 
 		<br> You win the game by matching your total score to random number, you lose the game if your total score goes above the random number. <br>
@@ -17,20 +20,18 @@
 		</p>
 	</div>
 
-	<div class="random number"></div>
-	<div class="scoreboard"></div>
+	<div class="targetNumber"></div>
 
-	<div class="crystal 1"> 
-		<img src="bluecrystal.jpg" alt="Blue Crystal" style="width:600px;height:614px;">
+	<div class="winLoseBox">
+		<p> Wins: </p>
+			<p class="win">0</p>
+		<p>Losses: </p>p>
+			<p class="loss">0</p>
 	</div>
 
-	<div class="crystal 2"> 
-	</div>
-
-	<div class="crystal 3"> 
-	</div>
-
-	<div class="crystal 4"> 
+	<div id="crystalButtons">
+		<div type="button" class="crystal1" value="1">
+			<img src="bluecrystal.jpg">
 	</div>
 
 
