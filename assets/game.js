@@ -1,6 +1,8 @@
-  
-  //How do we get this to be a random number for each game? Do we do a reset function like I put at the bottom of this code?
-  
+  // QUESTIONS!!!!!
+  //In the console log it says crystal.attr is not a function, I've googled and tried to figure out how to correct. No idea.
+  //Why is my random # generating negative numbers?
+  //It looks like my css file is not linking with my html...tried tinkering different things nothing worked. In same file path. and linked on HTML
+  // It also looks like my jQuery isn't linking and I tried tinkering with that too and no luck
 
   var randNum = Math.floor(Math.random()*120 - 19) +1
     console.log("randomNumber = " + randNum);
@@ -20,10 +22,10 @@
   var numberOptions = [crystal1, crystal2,crystal3,crystal4];
 
     for (var i = 0; i < numberOptions.length; i++) {
-    var imageCrystal = "";
-    imageCrystal.addClass("crystal-image"); 
-    imageCrystal.attr("src", "bluecrystal.jpg", "orangecrystal.jpg", "purplecrystal.jpg", "whitecrystal.jpg");
-    imageCrystal.attr("data-crystalvalue", numberOptions[i]);
+    var crystal = Math.floor(Math.random()*(12-1) +1);
+    //imageCrystal.addClass("crystal-image"); 
+    crystal.attr("1", "2","3","4");//these strings are the value
+    crystal.attr("data-crystalvalue", numberOptions[i]);
     $("#crystals").append(crystal-image);
     $(".crystal-image").on("click", function() {
       var crystalValue = ($(this).attr("data-crystalvalue"));
@@ -40,39 +42,20 @@
 
 //add buttons to image and on click event
   crystal1(":button")
-  $( "crystal-image" ).click()
+  $( "crystal" ).click()
   crystal2(":button")
-  $( "crystal-image" ).click()
+  $( "crystal" ).click()
   crystal3(":button")
-  $( "crystal-image" ).click()
+  $( "crystal" ).click()
   crystal4(":button")
-  $( "crystal-image" ).click()
+  $( "crystal" ).click()
 
-    var crystal1 = Math.floor(Math.random()*(12-1) +1);
-    // to actually click on crystal buttons:
-    $( "#crystal-image" ).click(function() {
-    $( "#crystal1" ).click();
-    });
-
-    var crystal2 = Math.floor(Math.random()*(12-1) +1);
-    $( "#crystal-image" ).click(function() {
-    $( "#crystal2" ).click();
-    });
-
-    var crystal3 = Math.floor(Math.random()*(12-1) +1);
-    $( "#crystal-image" ).click(function() {
-    $( "#crystal3" ).click();
-    });
-
-    var crystal4 = Math.floor(Math.random()*(12-1) +1)
-    $( "#crystal-image" ).click(function() {
-  $( "#crystal4" ).click();
-});
-
-    finalScore = 0;
+    
+    
     $(".ranNumBox").html(randNum);
     $(".scoreDisplayChild").html(finalScore);
   }
+  finalScore = 0;
 
 // to end the game
   if (finalScore === randNum)

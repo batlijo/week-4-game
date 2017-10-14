@@ -1,10 +1,15 @@
 h1 {
 	background: red;
+	width: 200px;
+	color: white;
 }
-.gameinstructions {
-	background:;
+#instructions {
+	background: yellow;
 }
-.crystal-image {
-      width: 300px;
-      height: 300px;
-    }
+
+.crystal1 {
+	float-left;
+}
+.crystal2 {
+  float-right;
+}
