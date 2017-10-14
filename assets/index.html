@@ -5,13 +5,15 @@
 	<link rel="stylesheet" type = "text/css" href=" style.css" />
 	<link rel="stylesheet" type = "text/css" href="reset.css" />
 	<script src= "game.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <body>
+
 	<div>
 		<h1 class="game name">CrystalsCollector!</h1>
 	</div>
 
-	<div id="instructionBox">
+	<div id ="instructions">
 		<p>You will be given a random number at the start of the game. 
 		<br> There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score. 
 		<br> You win the game by matching your total score to random number, you lose the game if your total score goes above the random number. <br>
@@ -20,26 +22,39 @@
 		</p>
 	</div>
 
-	<div class="targetNumber"></div>
+	<div class="randNum"></div>
 
 	<div class="winLoseBox">
 		<p> Wins: </p>
 			<p class="win">0</p>
-		<p>Losses: </p>p>
+		<p>Losses:</p>
 			<p class="loss">0</p>
 	</div>
 
-	<div id="crystals">
-		<div type="button" class="crystal1" value="1">
-			
+	<div class="crystal-image">
+		<div type="button" class="crystal1">
+			<img src="bluecrystal.jpg" style="width:128px;height:128px;"> 
+		</div>
+
+		<div type="button" class="crystal2">
+		<img src="orangecrystal.jpg" style="width:128px;height:128px;">
+		</div>
+
+		<div type="button" class="crystal3">
+		<img src="purplecrystal.jpg" style="width:128px;height:128px;">
+		</div>
+
+		<div type="button" class="crystal4">
+		<img src="whitecrystal.jpg" style="width:128px;height:128px;">
+		</div>	
 	</div>
 
-
-	<div class="score statement"> 
+	<div class="ScoreDisplay"> 
 		<p> Your total score is: </p>
 	</div>
 
-	<div class="Your score">
+	<div class="finalScore">
+		<p class="scoreDisplayChild"></p>
 	</div>
 
 

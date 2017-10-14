@@ -19,33 +19,60 @@
 
   var numberOptions = [crystal1, crystal2,crystal3,crystal4];
 
-
     for (var i = 0; i < numberOptions.length; i++) {
-    var imageCrystal = $("#img>");
-    imageCrystal.addClass("crystal-image");
-    imageCrystal.attr("src", "http://cdn.playbuzz.com/cdn/35910209-2844-45c0-b099-f4d82878d54f/00261fda-4062-4096-81fd-8cf96b9034e8.jpg");
+    var imageCrystal = "";
+    imageCrystal.addClass("crystal-image"); 
+    imageCrystal.attr("src", "bluecrystal.jpg", "orangecrystal.jpg", "purplecrystal.jpg", "whitecrystal.jpg");
     imageCrystal.attr("data-crystalvalue", numberOptions[i]);
-    $("#crystals").append(imageCrystal);
+    $("#crystals").append(crystal-image);
+    $(".crystal-image").on("click", function() {
+      var crystalValue = ($(this).attr("data-crystalvalue"));
+      crystalValue = parseInt(crystalValue);
+      counter += crystalValue;
+    });
   }
-
 
   function start()
   {
     //reset
     randomNum = Math.floor(Math.random()*120 - 19) +1
     console.log("randomNumber = " + randNum);
-    var crystal1 = Math.floor(Math.random()*(12-1) +1);
-    var crystal2 = Math.floor(Math.random()*(12-1) +1);
-    var crystal3 = Math.floor(Math.random()*(12-1) +1);
-    var crystal4 = Math.floor(Math.random()*(12-1) +1)
-    finalScore = 0;
 
+//add buttons to image and on click event
+  crystal1(":button")
+  $( "crystal-image" ).click()
+  crystal2(":button")
+  $( "crystal-image" ).click()
+  crystal3(":button")
+  $( "crystal-image" ).click()
+  crystal4(":button")
+  $( "crystal-image" ).click()
+
+    var crystal1 = Math.floor(Math.random()*(12-1) +1);
+    // to actually click on crystal buttons:
+    $( "#crystal-image" ).click(function() {
+    $( "#crystal1" ).click();
+    });
+
+    var crystal2 = Math.floor(Math.random()*(12-1) +1);
+    $( "#crystal-image" ).click(function() {
+    $( "#crystal2" ).click();
+    });
+
+    var crystal3 = Math.floor(Math.random()*(12-1) +1);
+    $( "#crystal-image" ).click(function() {
+    $( "#crystal3" ).click();
+    });
+
+    var crystal4 = Math.floor(Math.random()*(12-1) +1)
+    $( "#crystal-image" ).click(function() {
+  $( "#crystal4" ).click();
+});
+
+    finalScore = 0;
     $(".ranNumBox").html(randNum);
     $(".scoreDisplayChild").html(finalScore);
   }
-
-
- 
 
 // to end the game
   if (finalScore === randNum)
